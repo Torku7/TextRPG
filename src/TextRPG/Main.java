@@ -3,7 +3,7 @@ package TextRPG;
 import java.util.Scanner;
 import java.util.Random;
 
-
+//메인코드입니다
 public class Main {
     public static void main(String[] args) {
 

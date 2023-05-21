@@ -1,4 +1,5 @@
 package TextRPG;
+import java.util.Random;
 
     /*
      * 몬스터
@@ -17,9 +18,10 @@ package TextRPG;
         }
 
         public static Monster getRandomMonster() {
-            int selected = (int) (Math.random() * 3 + 1);
+            Random Monrand = new Random();
+            int Monsterrand = Monrand.nextInt(3);
 
-            switch (selected) {
+            switch (Monsterrand) {
                 case 0:
                     return new Goblin();
                 case 1:
@@ -27,27 +29,29 @@ package TextRPG;
                 case 2:
                     return new Troll();
             }
-
-            return new Goblin();
+            return null;
         }
 
-      /*  public static void main(String[] args) {
+       public static void main(String[] args) {
             Monster monster = getRandomMonster();
             System.out.println(monster.name + "에게 습격 받았습니다.");
             System.out.println(monster.attack + "의 데미지를 받았습니다.");
             System.out.println(monster.exp + "의 경험치 획득");
-        }*/
+        }
     }
+
+class Goblin extends Monster {
+
+    public Goblin() {
+        super("Goblin", 10);
+        this.exp = (int) (Math.random() * 30 + 20);
+    }
+}
 
     class Oak extends Monster {
 
         public Oak() {
-            super("Oak", 20);
-            this.exp = (int) (Math.random() * 30 + 20);
-        }
-
-        public Oak(String name, int attack) {
-            super(name, attack);
+            super("Oak", 25);
             this.exp = (int) (Math.random() * 30 + 20);
         }
     }
@@ -55,25 +59,9 @@ package TextRPG;
     class Troll extends Monster {
 
         public Troll() {
-            super("Troll", 30);
-            this.exp = (int) (Math.random() * 30 + 20);
-        }
-
-        public Troll(String name, int attack) {
-            super(name, attack);
+            super("Troll", 40);
             this.exp = (int) (Math.random() * 30 + 20);
         }
     }
 
-    class Goblin extends Monster {
 
-        public Goblin() {
-            super("Goblin", 10);
-            this.exp = (int) (Math.random() * 30 + 20);
-        }
-
-        public Goblin(String name, int attack) {
-            super(name, attack);
-            this.exp = (int) (Math.random() * 30 + 20);
-        }
-    }

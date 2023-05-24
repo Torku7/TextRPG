@@ -37,7 +37,10 @@ import java.util.Random;
             System.out.println(monster.name + "에게 습격 받았습니다.");
             System.out.println(monster.attack + "의 데미지를 받았습니다.");
             System.out.println(monster.exp + "의 경험치 획득");
+           System.out.println("몬스터 클래스");
         }
+
+
     }
 
 class Goblin extends Monster {

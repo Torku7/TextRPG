@@ -8,6 +8,7 @@ public class Player {
     public int exp;
     public int maxexp;
     public int level;
+    public int attack;
 
     public Player(int maxhp, int maxexp) {
         this.maxhp = maxhp;
@@ -15,11 +16,12 @@ public class Player {
         this.maxexp = maxexp;
         this.exp=0;
         this.level=1;
+        this.attack=5;
     }
 
     public void updateexp(int exp){
 
-        if(this.exp+exp < maxexp){
+        if(this.exp + exp < maxexp){
             this.exp += exp;
             return;
         }//exp가 maxexp보다 작을때 exp 증가만 하고 반환
@@ -32,6 +34,12 @@ public class Player {
         maxhp += 50;
         maxexp += 20;
         hp = maxhp;
+        attack += 1;
+    }
+
+    public void rest(){
+        hp = maxhp;
+        System.out.println("플레이어의 체력이 회복되었습니다." + hp+"/"+maxhp);
     }
 
 }

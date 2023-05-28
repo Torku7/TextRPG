@@ -11,8 +11,12 @@ public class Battle {
 
                    Monster monster = Monster.getRandomMonster();
 
-                   while (true){
+                   System.out.println(monster.name + "에게 습격 받았습니다.");
+                   System.out.println("공격력 : "+monster.attack );
+                   System.out.println("체력 : "+monster.monhp );
 
+               while (true){
+                           System.out.println("----------------------");
                            System.out.println("무엇을 할까요.");
                            System.out.println("1.공격");
                            System.out.println("2.도망친다");

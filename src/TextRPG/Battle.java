@@ -22,7 +22,7 @@ public class Battle {
                            if(actions == 1){
 
                                   monster.monhp -= player.attack; //몬스터에게 데미지를 준다.
-                                   System.out.println("몬스터의 체력은 : " + monster.monhp);
+                                   System.out.println(monster.name+"의 체력은 : " + monster.monhp);
 
                                    if(monster.monhp > 0){
                                            player.hp -= monster.attack;

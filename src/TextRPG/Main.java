@@ -23,10 +23,10 @@ public class Main {
                 Scanner namesc = new Scanner(System.in);
                 String name = namesc.nextLine();
 
-                Player player = new Player(105, 100);
+                Player player = new Player(105, 100);//캐릭터 정보 생성[class Player] (시작 HP ex:105/105 경험치 ex:0/100)
 
                 System.out.println("게임을 시작합니다");
-                //캐릭터 정보 생성[class Player] (시작 HP ex:105/105 경험치 ex:0/100)
+
 
 
                 while (true) {
@@ -38,9 +38,9 @@ public class Main {
                     int GamePlay = Play.nextInt();
 
                     if (GamePlay == 1) {//캐릭터 정보가 전투클래스로 넘어가야함(HP,경험치)
-                        //전투 클래스 호출
+                       Battle.battle(player);//전투 클래스 호출
                     } else if (GamePlay == 2) {//캐릭터 정보가 전투클래스로 넘어가야함(HP,경험치)
-                        //휴식 클래스 호출
+                       player.rest();//플레이어의 휴식 호출
                     } else if (GamePlay == 0) {
                         System.out.println("게임이 종료되었습니다.");
                         break;

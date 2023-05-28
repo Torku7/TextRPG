@@ -23,7 +23,7 @@ public class Main {
                 Scanner namesc = new Scanner(System.in);
                 String name = namesc.nextLine();
 
-                Player.player(105, 0);
+                Player player = new Player(105, 100);
 
                 System.out.println("게임을 시작합니다");
                 //캐릭터 정보 생성[class Player] (시작 HP ex:105/105 경험치 ex:0/100)

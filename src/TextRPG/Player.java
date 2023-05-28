@@ -30,6 +30,7 @@ public class Player {
     }
 
     public void levelup(){
+        System.out.println("Level Up!!!");
         level++;
         maxhp += 50;
         maxexp += 20;

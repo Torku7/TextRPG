@@ -11,17 +11,19 @@ import java.util.Random;
         public int attack;
         public String name;
         public int exp;
+        public int monhp;
 
-        public Monster(String name, int attack) {
+        public Monster(String name, int attack, int monhp) {
             this.name = name;
             this.attack = attack;
+            this.monhp =monhp;
         }
 
         public static Monster getRandomMonster() {
-            Random Monrand = new Random();
-            int Monsterrand = Monrand.nextInt(3);
+            Random monrand = new Random();
+            int monsterrand = monrand.nextInt(3);
 
-            switch (Monsterrand) {
+            switch (monsterrand) {
                 case 0:
                     return new Goblin();
                 case 1:
@@ -31,7 +33,7 @@ import java.util.Random;
             }
             return null;
         }
-
+/*
        public static void main(String[] args) {
             Monster monster = getRandomMonster();
             System.out.println(monster.name + "에게 습격 받았습니다.");
@@ -40,13 +42,13 @@ import java.util.Random;
            System.out.println("몬스터 클래스");
         }
 
-
+*/
     }
 
 class Goblin extends Monster {
 
     public Goblin() {
-        super("Goblin", 10);
+        super("Goblin", 10, 30);
         this.exp = (int) (Math.random() * 30 + 20);
     }
 }
@@ -54,7 +56,7 @@ class Goblin extends Monster {
     class Oak extends Monster {
 
         public Oak() {
-            super("Oak", 25);
+            super("Oak", 20, 40);
             this.exp = (int) (Math.random() * 30 + 20);
         }
     }
@@ -62,7 +64,7 @@ class Goblin extends Monster {
     class Troll extends Monster {
 
         public Troll() {
-            super("Troll", 40);
+            super("Troll", 30, 50);
             this.exp = (int) (Math.random() * 30 + 20);
         }
     }

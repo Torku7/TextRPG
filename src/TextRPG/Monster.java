@@ -21,15 +21,29 @@ import java.util.Random;
 
         public static Monster getRandomMonster() {
             Random monrand = new Random();
-            int monsterrand = monrand.nextInt(3);
+            int monsterrand = monrand.nextInt(9)+1; //시작 위치로부터(1 에서부터 시작) Bound 9값(1이후부터 9번까지의 랜덤 숫자) 즉 1~10중 하나를 출력함.
 
             switch (monsterrand) {
-                case 0:
-                    return new Goblin();
                 case 1:
-                    return new Oak();
+                    return new Trynden();
                 case 2:
-                    return new Troll();
+                    return new Shadowstrider();
+                case 3:
+                    return new Bloodraven();
+                case 4:
+                    return new Icebind();
+                case 5:
+                    return new Whiteflame();
+                case 6:
+                    return new Soulblade();
+                case 7:
+                    return new Stormbreak();
+                case 8:
+                    return new Darkheart();
+                case 9:
+                    return new Grimreapers();
+                case 10:
+                    return new Bloodwatch();
             }
             return null;
         }
@@ -45,28 +59,82 @@ import java.util.Random;
 */
     }
 
-class Goblin extends Monster {
+class Trynden extends Monster {
 
-    public Goblin() {
-        super("Goblin", 10, 30);
+    public Trynden() {
+        super("Trynden", 10, 30);
         this.exp = (int) (Math.random() * 30 + 20);
     }
 }
 
-    class Oak extends Monster {
+    class Shadowstrider extends Monster {
 
-        public Oak() {
-            super("Oak", 20, 40);
+        public Shadowstrider() {
+            super("Shadowstrider", 20, 40);
             this.exp = (int) (Math.random() * 30 + 20);
         }
     }
 
-    class Troll extends Monster {
+    class Bloodraven extends Monster {
 
-        public Troll() {
-            super("Troll", 30, 50);
+        public Bloodraven() {
+            super("Bloodraven", 30, 50);
             this.exp = (int) (Math.random() * 30 + 20);
         }
     }
 
+class Icebind extends Monster {
 
+    public Icebind() {
+        super("Icebind", 30, 50);
+        this.exp = (int) (Math.random() * 30 + 20);
+    }
+}
+
+class Whiteflame extends Monster {
+
+    public Whiteflame() {
+        super("Whiteflame", 30, 50);
+        this.exp = (int) (Math.random() * 30 + 20);
+    }
+}
+
+class Soulblade extends Monster {
+
+    public Soulblade() {
+        super("Soulblade", 30, 50);
+        this.exp = (int) (Math.random() * 30 + 20);
+    }
+}
+
+class Stormbreak extends Monster {
+
+    public Stormbreak() {
+        super("Stormbreak", 30, 50);
+        this.exp = (int) (Math.random() * 30 + 20);
+    }
+}
+
+class Darkheart extends Monster {
+
+    public Darkheart() {
+        super("Darkheart", 30, 50);
+        this.exp = (int) (Math.random() * 30 + 20);
+    }
+}
+
+class Grimreapers extends Monster {
+
+    public Grimreapers() {
+        super("Grimreapers", 30, 50);
+        this.exp = (int) (Math.random() * 30 + 20);
+    }
+}
+
+class Bloodwatch extends Monster {
+
+    public Bloodwatch() {
+        super("Bloodwatch", 30, 50);
+        this.exp = (int) (Math.random() * 30 + 20);
+    }
+}

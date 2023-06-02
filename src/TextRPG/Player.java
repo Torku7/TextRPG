@@ -39,6 +39,9 @@ public class Player {
     }
 
     public void rest(){
+        System.out.println("너무 지친 나머지 쓰러지듯이 잠에 들었다..");
+        System.out.println("ZzZzZzZzZz..");
+        System.out.println(" ");
         hp = maxhp;
         System.out.println("플레이어의 체력이 회복되었습니다." + hp+"/"+maxhp);
     }

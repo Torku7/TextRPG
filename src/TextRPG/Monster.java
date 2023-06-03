@@ -12,11 +12,13 @@ import java.util.Random;
         public String name;
         public int exp;
         public int monhp;
+        public int coin;
 
         public Monster(String name, int attack, int monhp) {
             this.name = name;
             this.attack = attack;
             this.monhp =monhp;
+            this.coin = coin;
         }
 
         public static Monster getRandomMonster() {
@@ -64,6 +66,8 @@ class Trynden extends Monster {
     public Trynden() {
         super("Trynden", 10, 30);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);//다른 몬스터에도 코인 적용 바람 수식 구간은 알아서 변경
+        
     }
 }
 

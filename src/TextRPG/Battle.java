@@ -42,6 +42,7 @@ public class Battle {
                                    else {
                                            System.out.println("몬스터를 처리 하였습니다. 획득 경험치는 : " + monster.exp);
                                           player.updateexp(monster.exp);
+                                          player.updatecoin(monster.coin);
                                           break;
                                    }
 

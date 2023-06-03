@@ -9,6 +9,7 @@ public class Player {
     public int maxexp;
     public int level;
     public int attack;
+    public int coin;
 
     public Player(int maxhp, int maxexp) {
         this.maxhp = maxhp;
@@ -17,7 +18,9 @@ public class Player {
         this.exp=0;
         this.level=1;
         this.attack=5;
+        this.coin=0;
     }
+
 
     public void updateexp(int exp){
 
@@ -27,6 +30,12 @@ public class Player {
         }//exp가 maxexp보다 작을때 exp 증가만 하고 반환
         this.exp = this.exp + exp - maxexp; //레벨업 후 남은 경험치 남기기
        levelup();
+    }
+
+    public void updatecoin(int coin){
+            this.coin += coin;
+            return;
+
     }
 
     public void levelup(){

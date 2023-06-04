@@ -38,6 +38,7 @@ public class Main {
                     while (true) {
                         System.out.println("1.전투");
                         System.out.println("2.휴식");
+                        System.out.println("3.상점");
                         System.out.println("0.종료");
 
                         Scanner Play = new Scanner(System.in);
@@ -47,6 +48,8 @@ public class Main {
                             Battle.battle(player);//전투 클래스 호출
                         } else if (GamePlay == 2) {//캐릭터 정보가 전투클래스로 넘어가야함(HP,경험치)
                             player.rest();//플레이어의 휴식 호출
+                        } else if (GamePlay == 3) {//상점클래스로 넘어감
+                            Shop.menu();
                         } else if (GamePlay == 0) {
                             System.out.println("게임이 종료되었습니다.");
                             break;

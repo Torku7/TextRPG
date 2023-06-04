@@ -20,6 +20,7 @@ public class Battle {
                            System.out.println("무엇을 할까요.");
                            System.out.println("1.공격");
                            System.out.println("2.도망친다");
+                           System.out.println("3.소치품");
 
                            int actions = action.nextInt();
 
@@ -47,9 +48,13 @@ public class Battle {
                                    }
 
                            }
-                           else {
+                           else if(actions == 2){
                                    System.out.println("도망치셨습니다. 전투 종료!!!");
                                    break;
+                           }else if(actions ==3){
+                               Player.inventory();
+                           }else {
+                               System.out.println("잘못입력하셨습니다.");
                            }
                    }
 

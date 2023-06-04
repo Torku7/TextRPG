@@ -1,15 +1,19 @@
 package TextRPG;
+
+import java.util.Scanner;
+
 //기본 플레이어 hp exp 받고 전투시 hp exp 계산식 받아와 오버라이드
 //if exp = maxexp 레벨업
 //레벨 오를때마다 maxexpl과 maxhp 증가
 public class Player {
-    public int hp;
-    public int maxhp;
+    public static int hp;
+    public static int maxhp;
     public int exp;
     public int maxexp;
     public int level;
     public int attack;
     public int coin;
+    public static int potion;
 
     public Player(int maxhp, int maxexp) {
         this.maxhp = maxhp;
@@ -19,6 +23,7 @@ public class Player {
         this.level=1;
         this.attack=5;
         this.coin=0;
+        this.potion=1;
     }
 
 
@@ -53,6 +58,39 @@ public class Player {
         System.out.println(" ");
         hp = maxhp;
         System.out.println("플레이어의 체력이 회복되었습니다." + hp+"/"+maxhp);
+    }
+
+    public static void inventory(){
+        while (true) {
+            System.out.println("----- 소지품 목록 -----");
+            System.out.println("1.포션 : " + potion);
+            System.out.println("0.소지품을 나간다.");
+
+            Scanner use = new Scanner(System.in);
+            int usep = use.nextInt();
+
+            if (usep == 1) {
+
+                if(hp==maxhp){
+                    System.out.println("이미 체력이 모두 회복되어 있습니다");
+                    System.out.println("사용을 중지합니다");
+                }else {
+                    System.out.println("포션을 사용합니다 체력이 50 회복됩니다");
+                    hp += 50;
+                    if (hp>maxhp){
+                        hp =maxhp;
+                    }
+                    potion--;
+                }
+                System.out.println("HP : " + hp + "/" + maxhp);
+
+            } else if (usep == 0) {
+                return;
+            } else {
+                System.out.println("잘못입력하셨습니다.");
+            }
+        }
+
     }
 
 }

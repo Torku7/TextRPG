@@ -37,7 +37,7 @@ public class Battle {
                                            if(Player.shild< monster.attack){
                                                monster.attack -= Player.shild;
                                                player.hp -= monster.attack;
-                                               System.out.println("플레이어의 체력은 : " + player.hp + "실드 : " +Player.shild);
+                                               System.out.println("플레이어의 체력은 : " + player.hp + "실드 : " +Player.shild);//문구 조정 필요
                                            }else {
                                                Player.shild -= monster.attack;
                                                System.out.println("플레이어의 체력은 : " + player.hp+ "실드 : " +Player.shild);

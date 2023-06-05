@@ -18,6 +18,7 @@ public class Battle {
                while (true){
                            System.out.println("----------------------");
                            System.out.println("무엇을 할까요.");
+                           System.out.println("공격력 : " + Player.attack);
                            System.out.println("1.공격");
                            System.out.println("2.도망친다");
                            System.out.println("3.소치품");
@@ -27,18 +28,30 @@ public class Battle {
                            if(actions == 1){
 
                                   monster.monhp -= player.attack; //몬스터에게 데미지를 준다.
-                               System.out.println(player.attack + "의 데미지를 입혔습니다!");
-                               System.out.println(monster.attack + "의 데미지를 받았습니다!");
-                                   System.out.println(monster.name+"의 체력은 : " + monster.monhp);
+                                  System.out.println(player.attack + "의 데미지를 입혔습니다!");
+                                  System.out.println(monster.attack + "의 데미지를 받았습니다!");
+                                  System.out.println(monster.name+"의 체력은 : " + monster.monhp);
 
                                    if(monster.monhp > 0){
-                                           player.hp -= monster.attack;
-                                           System.out.println("플레이어의 체력은 : " + player.hp);
-
-                                           if (player.hp <0){
-                                                   System.out.println("플레이어가 죽었습니다");
-                                                   break;//죽은거에서 끝나면 안됨
+                                       if(Player.armor ==1){
+                                           if(Player.shild< monster.attack){
+                                               monster.attack -= Player.shild;
+                                               player.hp -= monster.attack;
+                                               System.out.println("플레이어의 체력은 : " + player.hp + "실드 : " +Player.shild);
+                                           }else {
+                                               Player.shild -= monster.attack;
+                                               System.out.println("플레이어의 체력은 : " + player.hp+ "실드 : " +Player.shild);
                                            }
+                                       }else {
+                                           player.hp -= monster.attack;
+                                           System.out.println("플레이어의 체력은 : " + player.hp+ "실드 : " +Player.shild);
+
+                                           if (player.hp < 0) {
+                                               System.out.println("플레이어가 죽었습니다");
+                                               break;//죽은거에서 끝나면 안됨
+                                           }
+                                       }
+                                       System.out.println("플레이어의 체력은 : " + player.hp + "실드 : " +Player.shild);
                                    }
                                    else {
                                            System.out.println("몬스터를 처리 하였습니다. 획득 경험치는 : " + monster.exp);

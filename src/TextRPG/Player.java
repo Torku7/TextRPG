@@ -11,9 +11,12 @@ public class Player {
     public int exp;
     public int maxexp;
     public int level;
-    public int attack;
-    public int coin;
+    public static int attack;
+    public static int coin;
     public static int potion;
+    public static int armor;
+    public static int weapon;
+    public static int shild;
 
     public Player(int maxhp, int maxexp) {
         this.maxhp = maxhp;
@@ -22,7 +25,7 @@ public class Player {
         this.exp=0;
         this.level=1;
         this.attack=5;
-        this.coin=0;
+        this.coin=50;
         this.potion=1;
     }
 
@@ -63,6 +66,9 @@ public class Player {
     public static void inventory(){
         while (true) {
             System.out.println("----- 소지품 목록 -----");
+            System.out.println("보유 코인 : "+coin);
+            System.out.println("무기 : " + weapon);
+            System.out.println("방어구 : " + armor);
             System.out.println("1.포션 : " + potion);
             System.out.println("0.소지품을 나간다.");
 

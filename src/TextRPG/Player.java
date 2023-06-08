@@ -27,6 +27,8 @@ public class Player {
         this.attack=5;
         this.coin=50;
         this.potion=1;
+        this.weapon=0;
+        this.armor=0;
     }
 
 

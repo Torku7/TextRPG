@@ -18,7 +18,7 @@ public class Battle {
                while (true){
                            System.out.println("----------------------");
                            System.out.println("무엇을 할까요.");
-                           System.out.println("공격력 : " + Player.attack);
+                           System.out.println("공격력 : " + Player.attack + " 실드량 : " + Player.shild);
                            System.out.println("1.공격");
                            System.out.println("2.도망친다");
                            System.out.println("3.소치품");
@@ -34,17 +34,17 @@ public class Battle {
 
                                    if(monster.monhp > 0){
                                        if(Player.armor ==1){
-                                           if(Player.shild< monster.attack){
+                                           if(Player.shild < monster.attack){
                                                monster.attack -= Player.shild;
                                                player.hp -= monster.attack;
-                                               System.out.println("플레이어의 체력은 : " + player.hp + "실드 : " +Player.shild);//문구 조정 필요
+                                               Player.shild=0;
+                                               Player.armor--;
+                                               System.out.println("방어구가 파괴되었습니다.");
                                            }else {
                                                Player.shild -= monster.attack;
-                                               System.out.println("플레이어의 체력은 : " + player.hp+ "실드 : " +Player.shild);
                                            }
                                        }else {
                                            player.hp -= monster.attack;
-                                           System.out.println("플레이어의 체력은 : " + player.hp+ "실드 : " +Player.shild);
 
                                            if (player.hp < 0) {
                                                System.out.println("플레이어가 죽었습니다");

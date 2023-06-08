@@ -20,23 +20,35 @@ public class Shop {
                 int pick = picks.nextInt();
 
                 if (pick == 1) {
-                    Player.potion++;
-                    Player.coin -= 30;//가격 조정 필요
+                    if(Player.coin<30){
+                        System.out.println("코인이 부족합니다.");
+                    }else {
+                        Player.potion++;
+                        Player.coin -= 30;//가격 조정 필요
+                    }
                 } else if (pick == 2) {
                     if(Player.armor == 1){
                         System.out.println("이미 방어구를 착용하셨습니다.");
                     }else {
-                        Player.shild += 50;
-                        Player.coin -= 30;//가격 조정 필요
-                        Player.armor++;
+                        if(Player.coin<30){
+                            System.out.println("코인이 부족합니다.");
+                        }else {
+                            Player.shild += 50;
+                            Player.coin -= 30;//가격 조정 필요
+                            Player.armor++;
+                        }
                     }
                 } else if (pick == 3) {
                     if(Player.weapon == 1){
                         System.out.println("이미 무기를 착용하셨습니다.");
                     }else {
-                        Player.attack += 5;
-                        Player.coin -= 30;//가격 조정 필요
-                        Player.weapon++;
+                        if(Player.coin<30){
+                            System.out.println("코인이 부족합니다.");
+                        }else {
+                            Player.attack += 5;
+                            Player.coin -= 30;//가격 조정 필요
+                            Player.weapon++;
+                        }
                     }
                 } else if (pick == 0) {
                     return;

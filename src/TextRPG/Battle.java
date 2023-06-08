@@ -1,5 +1,6 @@
 package TextRPG;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 //랜덤으로 못스터 하나 뽑아서 hp클래서와  exp클래스에 정보 넘기기
 //The form will be created soon
@@ -16,21 +17,24 @@ public class Battle {
                    System.out.println("체력 : "+monster.monhp );
 
                while (true){
+                   try {
+                           TimeUnit.SECONDS.sleep(3);
                            System.out.println("----------------------");
                            System.out.println("무엇을 할까요.");
                            System.out.println("공격력 : " + Player.attack + " 실드량 : " + Player.shild);
                            System.out.println("1.공격");
                            System.out.println("2.도망친다");
                            System.out.println("3.소치품");
-
+                   }catch(Exception e) {
+                       System.out.println(e);
+                   }
                            int actions = action.nextInt();
 
                            if(actions == 1){
 
                                   monster.monhp -= player.attack; //몬스터에게 데미지를 준다.
-                                  System.out.println(player.attack + "의 데미지를 입혔습니다!");
-                                  System.out.println(monster.attack + "의 데미지를 받았습니다!");
-                                  System.out.println(monster.name+"의 체력은 : " + monster.monhp);
+                                  System.out.println(player.attack + "의 데미지를 입히고 " + monster.attack + "의 데미지를 받았습니다!");
+                                  System.out.println(monster.name +"의 체력은 : " + monster.monhp);
 
                                    if(monster.monhp > 0){
                                        if(Player.armor ==1){

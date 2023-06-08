@@ -36,12 +36,13 @@ public class Main {
 
 
                     while (true) {
+                        System.out.println("------------------");
                         System.out.println("1.전투");
                         System.out.println("2.휴식");
                         System.out.println("3.상점");
                         System.out.println("4.소지품");
                         System.out.println("0.종료");
-                        System.out.println("");
+
 
                         Scanner Play = new Scanner(System.in);
                         int GamePlay = Play.nextInt();

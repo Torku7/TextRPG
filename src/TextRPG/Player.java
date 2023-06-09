@@ -1,5 +1,6 @@
 package TextRPG;
 
+import java.util.Random;
 import java.util.Scanner;
 
 //기본 플레이어 hp exp 받고 전투시 hp exp 계산식 받아와 오버라이드
@@ -41,6 +42,8 @@ public class Player {
         this.exp = this.exp + exp - maxexp; //레벨업 후 남은 경험치 남기기
        levelup();
     }
+
+
 
     public void updatecoin(int coin){
             this.coin += coin;

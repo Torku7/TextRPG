@@ -1,4 +1,5 @@
 package TextRPG;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
@@ -32,9 +33,22 @@ public class Battle {
 
                            if(actions == 1){
 
-                                  monster.monhp -= player.attack; //몬스터에게 데미지를 준다.
-                                  System.out.println(player.attack + "의 데미지를 입히고 " + monster.attack + "의 데미지를 받았습니다!");
-                                  System.out.println(monster.name +"의 체력은 : " + monster.monhp);
+                               Random rand = new Random();
+                               int critical = rand.nextInt(5);
+
+                               if( critical == 0){
+                                   Player.attack += 10;
+                                   monster.monhp -= player.attack; //몬스터에게 데미지를 준다.
+                                   System.out.println("크리티컬이 터졌습니다.");
+                                   System.out.println(player.attack + "의 데미지를 입히고 " + monster.attack + "의 데미지를 받았습니다!");
+                                   System.out.println(monster.name +"의 체력은 : " + monster.monhp);
+                                   Player.attack -= 10;
+                               }else {
+                                   monster.monhp -= player.attack; //몬스터에게 데미지를 준다.
+                                   System.out.println(player.attack + "의 데미지를 입히고 " + monster.attack + "의 데미지를 받았습니다!");
+                                   System.out.println(monster.name +"의 체력은 : " + monster.monhp);
+
+                               }
 
                                    if(monster.monhp > 0){
                                        if(Player.armor ==1){

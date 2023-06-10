@@ -80,7 +80,7 @@ public class Battle {
 
                            }
                            else if(actions == 2){
-                                   System.out.println("도망치셨습니다. 전투 종료!!!");
+                                   System.out.println("무사히 도망쳤다.");
                                    break;
                            }else if(actions ==3){
                                Player.inventory();

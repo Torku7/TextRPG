@@ -75,7 +75,7 @@ public class Player {
             System.out.println("무기 : " + weapon);
             System.out.println("방어구 : " + armor);
             System.out.println("1.포션 : " + potion);
-            System.out.println("0.소지품을 나간다.");
+            System.out.println("0.메인으로 돌아가기.");
 
             Scanner use = new Scanner(System.in);
             int usep = use.nextInt();

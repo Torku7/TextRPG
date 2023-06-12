@@ -18,6 +18,7 @@ public class Main {
             System.out.print(">> ");
             while (true) {
 
+
                 int goend = go.nextInt();
 
                 if (goend == 1) {

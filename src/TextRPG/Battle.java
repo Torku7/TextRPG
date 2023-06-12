@@ -25,7 +25,7 @@ public class Battle {
                            System.out.println("공격력 : " + Player.attack + " 실드량 : " + Player.shild);
                            System.out.println("1.공격");
                            System.out.println("2.도망친다");
-                           System.out.println("3.소치품");
+                           System.out.println("3.소지품");
                    }catch(Exception e) {
                        System.out.println(e);
                    }

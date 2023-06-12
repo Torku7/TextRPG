@@ -20,7 +20,7 @@ public class Shop {
                 int pick = picks.nextInt();
 
                 if (pick == 1) {
-                    if(Player.coin<30){
+                    if(Player.coin<100){
                         System.out.println("코인이 부족합니다.");
                     }else {
                         Player.potion++;
@@ -30,7 +30,7 @@ public class Shop {
                     if(Player.armor == 1){
                         System.out.println("이미 방어구를 착용하셨습니다.");
                     }else {
-                        if(Player.coin<30){
+                        if(Player.coin<200){
                             System.out.println("코인이 부족합니다.");
                         }else {
                             Player.shild += 50;
@@ -42,7 +42,7 @@ public class Shop {
                     if(Player.weapon == 1){
                         System.out.println("이미 무기를 착용하셨습니다.");
                     }else {
-                        if(Player.coin<30){
+                        if(Player.coin<300){
                             System.out.println("코인이 부족합니다.");
                         }else {
                             Player.attack += 5;

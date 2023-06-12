@@ -78,7 +78,7 @@ public class Monster {
 class Swiftfury extends Monster {
 
     public Swiftfury() {
-        super("Swiftfury", 10, 30);
+        super("Swiftfury", 1, 5);
         this.exp = (int) (Math.random() * 30 + 20);
         this.coin =  (int) (Math.random() * 30 + 20);//다른 몬스터에도 코인 적용 바람 수식 구간은 알아서 변경
 
@@ -88,231 +88,260 @@ class Swiftfury extends Monster {
 class Shadowstriker extends Monster {
 
     public Shadowstriker() {
-        super("Shadowstriker", 20, 40);
+        super("Shadowstriker", 2, 5);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Bloodraven extends Monster {
 
     public Bloodraven() {
-        super("Bloodraven", 30, 50);
+        super("Bloodraven", 3, 5);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Icebreaker extends Monster {
 
     public Icebreaker() {
-        super("Icebreaker", 30, 50);
+        super("Icebreaker", 4, 10);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Stormwalker extends Monster {
 
     public Stormwalker() {
-        super("Stormwalker", 30, 50);
+        super("Stormwalker", 5, 10);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Soulspark extends Monster {
 
     public Soulspark() {
-        super("Soulspark", 30, 50);
+        super("Soulspark", 6, 10);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Bladeheart extends Monster {
 
     public Bladeheart() {
-        super("Bladeheart", 30, 50);
+        super("Bladeheart", 7, 10);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Sweetcloud extends Monster {
 
     public Sweetcloud() {
-        super("Sweetcloud", 30, 50);
+        super("Sweetcloud", 8, 10);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Grimreapers extends Monster {
 
     public Grimreapers() {
-        super("Grimreapers", 30, 50);
+        super("Grimreapers", 9, 35);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Icewrath extends Monster {
 
     public Icewrath() {
-        super("Icewrath", 30, 50);
+        super("Icewrath", 10, 10);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Whiteflame extends Monster {
 
     public Whiteflame() {
-        super("Whiteflame", 30, 50);
+        super("Whiteflame", 11, 10);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Soulstrider extends Monster {
 
     public Soulstrider() {
-        super("Soulstrider", 30, 50);
+        super("Soulstrider", 12, 15);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Shadowblade extends Monster {
 
     public Shadowblade() {
-        super("Shadowblade", 30, 50);
+        super("Shadowblade", 13, 15);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Bloodspark extends Monster {
 
     public Bloodspark() {
-        super("Bloodspark", 30, 50);
+        super("Bloodspark", 14, 15);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Stoneheart extends Monster {
 
     public Stoneheart() {
-        super("Stoneheart", 30, 50);
+        super("Stoneheart", 15, 15);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Swiftsoul extends Monster {
 
     public Swiftsoul() {
-        super("Swiftsoul", 30, 50);
+        super("Swiftsoul", 16, 15);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Lightblade extends Monster {
 
     public Lightblade() {
-        super("Lightblade", 30, 50);
+        super("Lightblade", 17, 20);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Darkstorm extends Monster {
 
     public Darkstorm() {
-        super("Darkstorm", 30, 50);
+        super("Darkstorm", 18, 20);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Bloodwatch extends Monster {
 
     public Bloodwatch() {
-        super("Bloodwatch", 30, 50);
+        super("Bloodwatch", 19, 55);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Iceblade extends Monster {
 
     public Iceblade() {
-        super("Iceblade", 30, 50);
+        super("Iceblade", 20, 20);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Flamespark extends Monster {
 
     public Flamespark() {
-        super("Flamespark", 30, 50);
+        super("Flamespark", 21, 20);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Shadowflame extends Monster {
 
     public Shadowflame() {
-        super("Shadowflame", 30, 50);
+        super("Shadowflame", 22, 25);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Stoneblade extends Monster {
 
     public Stoneblade() {
-        super("Stoneblade", 30, 50);
+        super("Stoneblade", 23, 25);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Grimheart extends Monster {
 
     public Grimheart() {
-        super("Grimheart", 30, 50);
+        super("Grimheart", 24, 25);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Whitewalker extends Monster {
 
     public Whitewalker() {
-        super("Whitewalker", 30, 50);
+        super("Whitewalker", 25, 25);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Soulblaze extends Monster {
 
     public Soulblaze() {
-        super("Soulblaze", 30, 50);
+        super("Soulblaze", 26, 87);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Arkshadow extends Monster {
 
     public Arkshadow() {
-        super("Arkshadow", 30, 50);
+        super("Arkshadow", 27, 30);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Flameheart extends Monster {
 
     public Flameheart() {
-        super("Flameheart", 30, 50);
+        super("Flameheart", 28, 30);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Swiftstone extends Monster {
 
     public Swiftstone() {
-        super("Swiftstone", 30, 50);
+        super("Swiftstone", 29, 30);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }
 
 class Darkblade extends Monster {
 
     public Darkblade() {
-        super("Darkblade", 30, 50);
+        super("Darkblade", 30, 30);
         this.exp = (int) (Math.random() * 30 + 20);
+        this.coin =  (int) (Math.random() * 30 + 20);
     }
 }

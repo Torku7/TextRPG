@@ -19,7 +19,7 @@ public class Battle {
 
                while (true){
                    try {
-                           TimeUnit.SECONDS.sleep(3);
+                           TimeUnit.SECONDS.sleep(2);
                            System.out.println("----------------------");
                            System.out.println("무엇을 할까요.");
                            System.out.println("공격력 : " + Player.attack + " 실드량 : " + Player.shild);
@@ -41,11 +41,16 @@ public class Battle {
                                    monster.monhp -= player.attack; //몬스터에게 데미지를 준다.
                                    System.out.println("크리티컬이 터졌습니다.");
                                    System.out.println(player.attack + "의 데미지를 입히고 " + monster.attack + "의 데미지를 받았습니다!");
+                                   if(monster.monhp <0)
+                                       monster.monhp =0;
                                    System.out.println(monster.name +"의 체력은 : " + monster.monhp);
+
                                    Player.attack -= 10;
                                }else {
                                    monster.monhp -= player.attack; //몬스터에게 데미지를 준다.
                                    System.out.println(player.attack + "의 데미지를 입히고 " + monster.attack + "의 데미지를 받았습니다!");
+                                   if(monster.monhp <0)
+                                       monster.monhp =0;
                                    System.out.println(monster.name +"의 체력은 : " + monster.monhp);
 
                                }
@@ -72,7 +77,7 @@ public class Battle {
                                        System.out.println("플레이어의 체력은 : " + player.hp + "실드 : " +Player.shild);
                                    }
                                    else {
-                                           System.out.println("몬스터를 처리 하였습니다. 획득 경험치는 : " + monster.exp);
+                                           System.out.println("몬스터를 처리 하였습니다. 획득 경험치는 : " + monster.exp + "획득 코인은 : " + monster.coin);
                                           player.updateexp(monster.exp);
                                           player.updatecoin(monster.coin);
                                           break;
